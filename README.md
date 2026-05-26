@@ -55,6 +55,15 @@ These scripts utilize `ggplot2` alongside the `patchwork` engine to stitch compl
 
 ---
 
+## Data Specifications
+
+### Expected Input Data Formats
+
+* **LC-MS Peak Tables**: Standard `.csv` or `.tsv` files populated with `row m/z`, `row retention time`, and distinct sample column names following the exact naming convention/string format: `GAQ_02_[Genotype]_[Tissue]_[Replicate]` (e.g., `GAQ_02_SIE13_YL_1`).
+* **SGA Structural Database**: The statistical visualization scripts (`aglycones.R` and `glycosylation.R`) expect a curated spreadsheet named `Database_SGA_YL_YR_FLW.xlsx` placed inside your active working directory, containing cleaned columns explicitly labeled `Aglycone` and `Glycosylation`.
+
+---
+
 ## Prerequisites & Dependencies
 
 ### Python Environment (3.x)
@@ -64,8 +73,3 @@ pip install pandas openpyxl requests tqdm
 
 install.packages(c("readxl", "tidyverse", "ggplot2", "patchwork", "ggdendro", 
                    "sf", "rnaturalearth", "rnaturalearthdata", "ggspatial", "cowplot", "ggrepel"))
-
-## Expected Input Data Formats
-LC-MS Peak Tables: Standard .csv or .tsv files populated with row m/z, row retention time, and distinct sample column names following the string format: GAQ_02_[Genotype]_[Tissue]_[Replicate].
-
-SGA Structural Database: The statistical visualization scripts (aglycones.R and glycosylation.R) expect a curated spreadsheet named Database_SGA_YL_YR_FLW.xlsx placed inside your active working directory, containing cleaned columns labeled Aglycone and Glycosylation.
