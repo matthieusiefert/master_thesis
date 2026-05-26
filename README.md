@@ -65,7 +65,7 @@ pip install pandas openpyxl requests tqdm
 install.packages(c("readxl", "tidyverse", "ggplot2", "patchwork", "ggdendro", 
                    "sf", "rnaturalearth", "rnaturalearthdata", "ggspatial", "cowplot", "ggrepel"))
 
-Expected Input Data Formats
+## Expected Input Data Formats
 LC-MS Peak Tables: Standard .csv or .tsv files populated with row m/z, row retention time, and distinct sample column names following the string format: GAQ_02_[Genotype]_[Tissue]_[Replicate].
 
 SGA Structural Database: The statistical visualization scripts (aglycones.R and glycosylation.R) expect a curated spreadsheet named Database_SGA_YL_YR_FLW.xlsx placed inside your active working directory, containing cleaned columns labeled Aglycone and Glycosylation.
